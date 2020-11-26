@@ -7,7 +7,6 @@ Mpeg_Player::Mpeg_Player(QWidget *parent) :
 {
     ui->setupUi(this);
     buildLayout();
-
 }
 
 Mpeg_Player::~Mpeg_Player()

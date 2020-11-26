@@ -17,25 +17,24 @@ MainWindow::~MainWindow()
 void MainWindow::buildTable(){
     central.setParent(ui->centralWidget);
     central.setOrientation(Qt::Horizontal);
-    testChild();
+    /*testChild();
     int minw=0, minh=0;
     minw=central.minimumWidth(); minh=central.minimumHeight();
     this->resize(minw+4, minh+40);
-    this->setMinimumSize(minw+4, minh+40);
+    this->setMinimumSize(minw+4, minh+40);*/
     //testHTML();
     //testSWF();
+    testHTTP();
+}
+void MainWindow::testHTTP(){
 }
 void MainWindow::testHTML(){
-    QString path("http://127.0.0.1/tinymce");
-    QUrl url(path);
-    htmlRender=new QWebView();
-    htmlRender->setUrl(url);
+    htmlRender=new HTMLEdit();
+    central.addWidget(htmlRender);
+    htmlRender->path="http://127.0.0.1/16.html";
+    htmlRender->viewHTML();
 }
 void MainWindow::testSWF(){
-    /*swfRender=new QAxWidget();
-    swfRender->setControl("ShockwaveFlash.ShockwaveFlash");
-    swfRender->dynamicCall("loadMovie(long, String)", 0, "http://127.0.0.1/basket3.swf");
-    swfRender->show();*/
     swfPlayer=new SWFPlayer();
     central.resize(600,600);
     central.addWidget(swfPlayer);

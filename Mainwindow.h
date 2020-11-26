@@ -6,6 +6,7 @@
 #include <QSplitter>
 #include "Mpeg_Player.h"
 #include "SWFPlayer.h"
+#include "htmledit.h"
 
 namespace Ui {
 class MainWindow;
@@ -21,7 +22,9 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    QWebView *htmlRender;
+    //QWebView *htmlRender;
+    HTMLEdit *htmlRender;
+
     Mpeg_Player *child;
     SWFPlayer *swfPlayer;
     QSplitter central;
@@ -31,6 +34,7 @@ private:
     void testMPEG();
     void testSWF();
     void testChild();
+    void testHTTP();
 protected:
     virtual void resizeEvent(QResizeEvent *);
 };
