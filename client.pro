@@ -16,13 +16,15 @@ SOURCES += main.cpp\
     Mpeg_Player.cpp \
     Mainwindow.cpp \
     SWFPlayer.cpp \
-    HTMLEdit.cpp
+    HTMLEdit.cpp \
+    exercise_treeview.cpp
 
 HEADERS  += \
     Mpeg_Player.h \
     Mainwindow.h \
     SWFPlayer.h \
-    HTMLEdit.h
+    HTMLEdit.h \
+    exercise_treeview.h
 
 FORMS    += mainwindow.ui \
     mpeg_player.ui
